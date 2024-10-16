@@ -15,7 +15,7 @@ h1, h2, p, a {
 
 h1, h2 {
     font-family: 'Protest Strike', sans-serif;
-    text-transform: uppercase; /* Added to make titles uppercase */
+    text-transform: uppercase; /* Makes titles uppercase */
 }
 
 h1 {
@@ -56,6 +56,28 @@ nav a:hover {
 
 nav a:hover::after {
     width: 100%;
+}
+
+/* Header and Logo */
+header {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.org-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevents the logo from shrinking */
 }
 
 /* Hero Section */
@@ -214,6 +236,7 @@ footer p {
     }
 
     .org-logo {
+        width: 40px; /* Adjust the size for mobile */
         margin: 0 0 10px 0;
     }
 
@@ -263,6 +286,10 @@ footer p {
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
+    .org-logo {
+        width: 50px; /* Adjust the size for tablets */
+    }
+
     h1 {
         font-size: 2.5em;
     }
