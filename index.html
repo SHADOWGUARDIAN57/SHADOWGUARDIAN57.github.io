@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shadow Guardians</title>
+    <title id="title">Shadow Guardians</title>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- For browsers that prefer PNG favicons -->
@@ -18,17 +18,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="lang-en" class="lang-btn">EN</button>
+        <button id="lang-pt" class="lang-btn">PT</button>
+    </div>
+
     <!-- Navigation -->
     <header>
         <div class="logo-title">
             <img src="org-logo.png" alt="Shadow Guardians Logo" class="org-logo">
-            <h1>Shadow Guardians</h1>
+            <h1 id="site-title">Shadow Guardians</h1>
         </div>
         <nav>
-            <a href="#">Home</a>
-            <a href="https://discord.gg/elitesc" target="_blank" rel="noopener noreferrer">Discord</a>
-            <a href="https://robertsspaceindustries.com/spectrum/community/SDGS" target="_blank" rel="noopener noreferrer">Spectrum</a>
-            <a href="https://robertsspaceindustries.com/orgs/SDGS" target="_blank" rel="noopener noreferrer">Join Us</a>
+            <a href="#" id="nav-home">Home</a>
+            <a href="https://discord.gg/elitesc" target="_blank" rel="noopener noreferrer" id="nav-discord">Discord</a>
+            <a href="https://robertsspaceindustries.com/spectrum/community/SDGS" target="_blank" rel="noopener noreferrer" id="nav-spectrum">Spectrum</a>
+            <a href="https://robertsspaceindustries.com/orgs/SDGS" target="_blank" rel="noopener noreferrer" id="nav-join">Join Us</a>
         </nav>
     </header>
 
@@ -36,9 +42,9 @@
     <div class="hero">
         <div class="overlay"></div>
         <div class="hero-text">
-            <h2>Rescue in the Depths of Space</h2>
-            <p>Your safety is our mission.</p>
-            <a href="https://robertsspaceindustries.com/orgs/SDGS" target="_blank" rel="noopener noreferrer" class="btn">Join Our Ranks</a>
+            <h2 id="hero-title">Rescue in the Depths of Space</h2>
+            <p id="hero-subtitle">Your safety is our mission.</p>
+            <a href="https://robertsspaceindustries.com/orgs/SDGS" target="_blank" rel="noopener noreferrer" class="btn" id="hero-button">Join Our Ranks</a>
         </div>
         <!-- Particles.js Container -->
         <div id="particles-js"></div>
@@ -46,17 +52,17 @@
 
     <!-- Content Section -->
     <div class="content glass">
-        <h2>About Shadow Guardians</h2>
-        <p>
+        <h2 id="about-title">About Shadow Guardians</h2>
+        <p id="about-text">
             The Shadow Guardians navigate the infinite expanse, responding to distress beacons from distant star systems. As pioneers of interstellar rescue, we are committed to ensuring that every soul is safe among the stars.
         </p>
-        <a href="https://discord.gg/elitesc" target="_blank" rel="noopener noreferrer" class="btn">Join Our Discord</a>
+        <a href="https://discord.gg/elitesc" target="_blank" rel="noopener noreferrer" class="btn" id="about-button">Join Our Discord</a>
     </div>
 
     <!-- Video Section -->
     <div class="video-section">
-        <h2>Our Anthem</h2>
-        <p>Experience the spirit of the Shadow Guardians through our official anthem.</p>
+        <h2 id="anthem-title">Our Anthem</h2>
+        <p id="anthem-description">Experience the spirit of the Shadow Guardians through our official anthem.</p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/xPBGWF3MdCU" title="Shadow Guardians Official Anthem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
         </div>
@@ -67,12 +73,14 @@
         <a href="https://robertsspaceindustries.com/" target="_blank" rel="noopener noreferrer">
             <img src="star-citizen-logo.png" alt="Star Citizen Logo" class="star-citizen-logo">
         </a>
-        <p>&copy; 2023 Shadow Guardians. All rights reserved.</p>
+        <p id="footer-text">&copy; 2023 Shadow Guardians. All rights reserved.</p>
     </footer>
 
     <!-- Scripts -->
     <!-- Particles.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Language Script -->
+    <script src="lang/lang.js"></script>
     <!-- Initialize Particles.js -->
     <script>
       particlesJS("particles-js", {
