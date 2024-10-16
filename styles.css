@@ -15,7 +15,7 @@ h1, h2, p, a {
 
 h1, h2 {
     font-family: 'Orbitron', sans-serif;
-    /* text-transform: uppercase; */ /* Remove this line if you don't want uppercase */
+    text-transform: uppercase; /* Keep titles in uppercase */
 }
 
 h1 {
@@ -177,8 +177,8 @@ header {
 }
 
 .video-section h2 {
-    font-family: 'Protest Strike', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase; /* Keep titles in uppercase */
     font-size: 2.5em;
     margin-bottom: 20px;
     text-shadow: 0 0 5px #ff3333;
