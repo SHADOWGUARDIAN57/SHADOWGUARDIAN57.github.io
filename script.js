@@ -34,34 +34,37 @@ particlesJS("particles-js", {
 document.addEventListener('DOMContentLoaded', () => {
   const rocket = document.querySelector('.rocket');
   const flame = document.querySelector('.flame');
-  let isMoving = false;
+  let lastX = null;
+  let lastY = null;
 
   document.addEventListener('mousemove', (e) => {
     // Update rocket position
     rocket.style.left = `${e.clientX - 20}px`; // Adjust to center the rocket
     rocket.style.top = `${e.clientY - 40}px`;
 
-    // Rotate rocket towards movement direction
-    if (isMoving) {
-      const deltaX = e.movementX;
-      const deltaY = e.movementY;
+    // Calculate movement direction
+    if (lastX !== null && lastY !== null) {
+      const deltaX = e.clientX - lastX;
+      const deltaY = e.clientY - lastY;
       const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI) + 90;
       rocket.style.transform = `rotate(${angle}deg)`;
+
+      // Show flame when moving
+      if (deltaX !== 0 || deltaY !== 0) {
+        flame.style.opacity = '1';
+      } else {
+        flame.style.opacity = '0';
+      }
     }
 
-    // Show flame when moving
-    if (e.movementX !== 0 || e.movementY !== 0) {
-      flame.style.opacity = '1';
-      isMoving = true;
-    } else {
-      flame.style.opacity = '0';
-      isMoving = false;
-    }
+    lastX = e.clientX;
+    lastY = e.clientY;
   });
 
-  // Hide flame when mouse stops moving
+  // Hide flame when mouse leaves the window
   document.addEventListener('mouseout', () => {
     flame.style.opacity = '0';
-    isMoving = false;
+    lastX = null;
+    lastY = null;
   });
 });
