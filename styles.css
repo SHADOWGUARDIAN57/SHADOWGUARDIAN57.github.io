@@ -174,8 +174,12 @@ header {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    padding-top: 56.25%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-container::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
 
 .video-container iframe {
@@ -327,6 +331,10 @@ footer p {
     .star-citizen-logo {
         width: 80px;
     }
+
+    .video-container {
+        width: 100%;
+    }
 }
 
 /* Tablets */
@@ -410,4 +418,16 @@ footer p {
     }
 
     .btn {
-     
+        padding: 15px 30px;
+        font-size: 1.08em;
+    }
+
+    .glass {
+        margin: 20px;
+        padding: 40px;
+    }
+
+    .star-citizen-logo {
+        width: 100px;
+    }
+}
