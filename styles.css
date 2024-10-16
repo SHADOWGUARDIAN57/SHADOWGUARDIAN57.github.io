@@ -14,8 +14,8 @@ h1, h2, p, a {
 }
 
 h1, h2 {
-    font-family: 'Protest Strike', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    /* text-transform: uppercase; */ /* Remove this line if you don't want uppercase */
 }
 
 h1 {
