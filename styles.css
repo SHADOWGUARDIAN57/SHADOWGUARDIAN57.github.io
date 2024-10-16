@@ -15,27 +15,7 @@ h1, h2, p, a {
 
 h1, h2 {
     font-family: 'Protest Strike', sans-serif;
-}
-
-/* Header and Navigation */
-header {
-    background-color: #000000;
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #333;
-    position: relative;
-}
-
-.logo-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.org-logo {
-    width: 60px;
-    height: auto;
-    margin-right: 15px;
+    text-transform: uppercase; /* Added to make titles uppercase */
 }
 
 h1 {
